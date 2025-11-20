@@ -3,7 +3,7 @@
 The project investigates whether the organization of the high-level visual cortex (Ventral vs. Dorsal streams) aligns more closely with **visual-descriptive** language or **abstract-conceptual** language. Using Representational Similarity Analysis (RSA), we compared human neural data (fMRI and MEG) against three computational models:
 1.  **DCNN-Image:** Visual embeddings (CLIP).
 2.  **LLM-Visual Text:** Generated detailed visual descriptions (SGPT embeddings).
-3.  **LLM-Abstract Text:** Conceptual/Encyclopedic descriptions (SGPT embeddings).
+3.  **LLM-Abstract Text:** Conceptual descriptions (SGPT embeddings).
 
 ## Project Structure
 
@@ -58,15 +58,14 @@ PyTorch, Hugging Face Transformers, Sentence-Transformers, OpenAI API
 
 To reproduce the results, you need the dataset from Cichy et al. (2016). Source: Cichy, R. M., Pantazis, D., & Oliva, A. (2016). Similarity-based fusion of MEG and fMRI reveals spatio-temporal dynamics in human cortex during visual object recognition.
 
-Required Directory Structure:
-Ensure your project folder is organized as follows before running the scripts:
-
-imgs_png/                     # Directory containing the 92 stimulus images (1.png to 92.png)
-semantic_descriptions.json    # JSON file with abstract/encyclopedic descriptions for the images
-all_roi_rdms_small_res.csv    # Pre-computed fMRI RDMs (Upper triangle vectorized)
-upper_triangle_meg.csv        # Pre-computed MEG RDMs (Upper triangle vectorized, time-resolved)
-
 # Usage
+
+Ensure your project folder contains the following:
+imgs_png/ - Directory containing the 92 stimulus images (1.png to 92.png)
+semantic_descriptions.json - JSON file with abstract descriptions for the images
+all_roi_rdms_small_res.csv - Pre-computed fMRI RDMs (Upper triangle vectorized)
+upper_triangle_meg.csv - Pre-computed MEG RDMs (Upper triangle vectorized, time-resolved)
+
 Run the scripts in the following order:
 
 1. Generate Visual Descriptions
